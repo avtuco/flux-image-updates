@@ -15,7 +15,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-v12
+  name: frontend-v122
   labels:
     app: frontend
     version: v1
