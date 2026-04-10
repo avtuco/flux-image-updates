@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: containerregneuhhubdevreg01.azurecr.io/probes:latest # {"$imagepolicy": "flux-probes:probes"} 
+        image: containerregneuhhubdevreg01.azurecr.io/probes:1.0.5 # {"$imagepolicy": "flux-probes:probes"} 
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
@@ -55,5 +55,3 @@ spec:
             port: 8080
           failureThreshold: 1
           periodSeconds: 10
-
----
