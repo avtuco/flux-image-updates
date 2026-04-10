@@ -11,4 +11,3 @@ jobs:
         uses: stackrox/kube-linter-action@v1
         with:
          directory: yamls
-         config: .kube-linter/config.yaml
