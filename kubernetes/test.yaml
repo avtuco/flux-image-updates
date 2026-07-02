@@ -1,0 +1,9 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ing-test
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true" 
+spec:
+  rules:
+  - host: internal.hh.com
