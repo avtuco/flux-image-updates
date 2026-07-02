@@ -6,17 +6,14 @@ on:
   push:
     branches: [ main ]
 
-jobs:
-  lint-and-validate:
+lint-and-validate:
     runs-on: ubuntu-latest
+    container:
+      image: openpolicyagent/conftest:latest
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-
-      - name: Setup Conftest
-        uses: open-policy-agent/conftest-action@v1
-        with:
-          version: 'latest'
 
       - name: Run Policy Checks
         run: |
