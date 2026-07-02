@@ -1,0 +1,23 @@
+name: Conftest Validate ingress yaml
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  lint-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Conftest
+        uses: open-policy-agent/conftest-action@v1
+        with:
+          version: 'latest'
+
+      - name: Run Policy Checks
+        run: |
+          conftest test kubernetes/*.yaml --policy policy/
