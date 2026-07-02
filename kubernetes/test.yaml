@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: ing-test
   annotations:
-    service.beta.kubernetes.io/azure-load-balancer-internal: "true" 
+    appgw.ingress.kubernetes.io/use-private-ip: "true" 
 spec:
   rules:
   - host: internal.hh.com
