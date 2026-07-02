@@ -6,7 +6,8 @@ on:
   push:
     branches: [ main ]
 
-lint-and-validate:
+jobs:
+  lint-and-validate:
     runs-on: ubuntu-latest
     container:
       image: openpolicyagent/conftest:latest
